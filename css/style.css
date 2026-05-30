@@ -138,6 +138,7 @@ button:hover{
 
 .navigation-div ul{
     list-style: none;
+    padding: 0px;
 }
 
 .navigation-div ul li a{
@@ -164,31 +165,22 @@ button:hover{
 }
 
 @media (max-width: 600px){
-
-    .navigation-div ul{
-        gap:10px;
-    }
-    .logo-div h2{
-        font-size: 18px;
-    }
-
-    .logo-div i{
-        font-size: 11px;
+    .header-wrapper{
+        flex-direction: column;
+        justify-content: center;
+        gap:20px;
+        padding: 20px 10px;
     }
 
-    .navigation-div ul li{
-        width: fit-content;
+    .logo-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         text-align: center;
     }
 
-    .navigation-div ul li a{
-        padding: 8px 0;
-        font-size:13px;
-    }
-
     .contact-btn{
-        width:fit-content;
-        padding: 5px 10px !important;
+        padding: 5px 10px;
     }
 }
 
@@ -241,11 +233,7 @@ button:hover{
     margin: 0;
 }
 
-@media screen and(max-width:600px){
-    .hero-heading span:last-of-type{
-        font-size:40px;
-    }
-}
+
 
 .hero-image{
     background: url('../images/crafted.jpg');
@@ -256,6 +244,7 @@ button:hover{
     border: 3px solid #fff;
     box-shadow: 0 0 0 2px var(--primary-color);
 }
+
 
 .h1-heading span{
     display: block;
@@ -268,6 +257,8 @@ button:hover{
 .h1-heading span:last-of-type{
     font-size:40px!important;
 }
+
+
 
 .image-wrapper{
     height: 450px;
@@ -369,7 +360,7 @@ button:hover{
     }
 }
 
-@media (max-width: 360px){
+@media (max-width: 500px){
     .gallery-section{
         grid-template-columns: 1fr;
     }
@@ -478,3 +469,49 @@ footer p a{
     color: var(--secondary-color);
 }
 /*Footer*/
+
+@media (max-width: 600px){
+
+    .centered-txt{
+        text-align: center;
+    }
+
+    h1, h2, h3, h4{
+        text-align: center;
+    }
+
+    p{
+        text-align: center;
+    }
+
+    .hero-image{
+        height: 310px;
+    }
+
+    .image-wrapper{
+        height: 300px;
+    }
+
+    .hero-heading span:first-of-type,
+    .h1-heading span:first-of-type,
+    .h2-heading span:first-of-type{
+        font-size: 22px;
+    }
+
+    .hero-heading span:last-of-type,
+    .h1-heading span:last-of-type,
+    .h2-heading span:last-of-type{
+        font-size: 34px;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+
+    button{
+        display: block;
+        margin: 10px auto;
+        max-width: 280px;
+        text-align: center;
+    }
+}

@@ -11,6 +11,10 @@
 
 /*DECLARATIONS*/
 
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     margin:0;
     box-sizing: border-box;
@@ -514,4 +518,35 @@ footer p a{
         max-width: 280px;
         text-align: center;
     }
+}
+
+#lightbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+#lightbox img{
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    transform: scale(0.95);
+    transition: 0.2s ease;
+}
+
+#lightbox.active{
+    display: flex;
+}
+
+#lightbox.active img{
+    transform: scale(1);
 }
